@@ -11,9 +11,9 @@ a:link {
 nav {
   font-family: tahoma;
   border:1px dashed;
-  margin-top:-20px;
-  margin-left:50px;
-  width:50%;
+  margin-top:-40px;
+  margin-left:170px;
+  width:30%;
 }
 #bio {
   text-align: center;
@@ -24,5 +24,12 @@ header {
   position:fixed;
   background-color: #ffffff;
   border:1px dashed;
-
+}
+#social {
+  margin-top:-22px;
+  margin-left:65%;
+}
+#search-bar {
+  margin-top:-25px;
+  margin-left:80%;
 }
