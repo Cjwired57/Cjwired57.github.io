@@ -1,6 +1,6 @@
 html {
   color:#000080;
-  background-color: #ffffff;
+  background-color: #fdfdf0;
 }
 a:hover {
   color: #ff00ff;
@@ -8,22 +8,24 @@ a:hover {
 a:link {
   text-decoration: none;
 }
+h5 {
+  margin-left:10%;
+  font-family:tahoma;
+}
 nav {
   font-family: tahoma;
-  border:1px dashed;
   margin-top:-40px;
-  margin-left:170px;
+  margin-left:30%;
   width:30%;
 }
 #bio {
   text-align: center;
-  border:1px dashed;
 }
 header {
   width:100%;
+  height:7%;
   position:fixed;
-  background-color: #ffffff;
-  border:1px dashed;
+  background-color: #eef3e2;
 }
 #social {
   margin-top:-22px;
@@ -32,4 +34,17 @@ header {
 #search-bar {
   margin-top:-25px;
   margin-left:80%;
+}
+IMG.profile {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+  padding-top:5%;
+}
+footer {
+  background-color:#eef3e2;
+  width:100%;
+  height:7%;
+  position:fixed;
 }
