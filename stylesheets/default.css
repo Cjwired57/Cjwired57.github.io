@@ -5,13 +5,15 @@ html {
 a:hover {
   color: #ff00ff;
 }
+a:link {
+  text-decoration: none;
+}
 nav {
   font-family: tahoma;
   border:1px dashed;
   margin-top:-20px;
   margin-left:50px;
   width:50%;
-
 }
 .bio {
   text-align: center;
