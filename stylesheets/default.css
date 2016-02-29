@@ -1,9 +1,15 @@
 html {
   color:#000080;
-  background-color:green;
+  background-color:red;
 }
 a:link {
   color: #800080;
 }
 a:visited {
   color: #ff0000;
+nav {
+  display:inline-block;
+}
+nav {
+  font-family: verdana;
+}
