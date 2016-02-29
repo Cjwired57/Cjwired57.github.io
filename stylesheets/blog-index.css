@@ -1,8 +1,15 @@
 #right {
   float:right;
-  background-color:red;
+  width:50%;
+  height:40%;
+  margin-top:150px;
+  margin-right:25%;
 }
+
 #left {
   float:left;
-  background-color:blue;
+  height:40%;
+  width:50%;
+  margin-top:150px;
+  margin-left:25%;
 }
