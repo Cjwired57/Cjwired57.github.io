@@ -13,13 +13,16 @@ nav {
 }
 nav {
   font-family: tahoma;
+  border:1px dashed;
 }
 .bio {
   text-align: center;
+  border:1px dashed;
 }
 header {
   width:100%;
   position:fixed;
   background-color: #ffffff;
+  border:1px dashed;
 
 }
