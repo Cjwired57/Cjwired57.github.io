@@ -14,9 +14,9 @@ nav {
 nav {
   font-family: tahoma;
   border:1px dashed;
-  margin-top:0px;
+  margin-top:-20px;
   margin-left:50px;
-  width:30%;
+  width:50%;
 }
 .bio {
   text-align: center;
