@@ -2,14 +2,8 @@ html {
   color:#000080;
   background-color: #ffffff;
 }
-a:link {
-  color: #800080;
-}
-a:visited {
-  color: #ff0000;
-}
-nav {
-  display:inline-block;
+a:hover {
+  color: #ff00ff;
 }
 nav {
   font-family: tahoma;
@@ -17,7 +11,7 @@ nav {
   margin-top:-20px;
   margin-left:50px;
   width:50%;
-  height:20px;
+
 }
 .bio {
   text-align: center;
