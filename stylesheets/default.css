@@ -1,6 +1,6 @@
 html {
   color:#000080;
-  background-color:red;
+  background-color: #ffffff;
 }
 a:link {
   color: #800080;
@@ -13,4 +13,7 @@ nav {
 }
 nav {
   font-family: tahoma;
+}
+.bio {
+  text-align: center;
 }
