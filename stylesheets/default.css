@@ -1,13 +1,9 @@
 html {
   color:#000080;
-  background-color:red;
+  background-color:green;
 }
 a:link {
   color: #800080;
 }
 a:visited {
   color: #ff0000;
-
-header {
-  display:inline-block;
-}
