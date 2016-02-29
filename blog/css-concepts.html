@@ -7,23 +7,24 @@
   <link rel="stylesheet" href="../stylesheets/default.css" type="text/css"/>
   <link rel="stylesheet" href="../stylesheets/blog.css" type="text/css"/>
 </head>
-<header>
+<body>
+  <header>
   <div id="blog-title"><h5>Chris Lamkin's DBC Blog</h5></div>
 
   <div id="nav-bar"><nav>
     <a href="http://cjwired57.github.io/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">About Me</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Projects</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Resume</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cjwired57.github.io/blog/index.html">Blog</a>
   </nav></div>
   <div id="social">
-    <a href="https://www.facebook.com/clamkin56"><img src="imgs/Facebook-logo.png" width="25" height="25" alt="facebook"></a>
-    <a href="https://twitter.com/Cjlamkin"><img src="imgs/twitter-logo.png" width="25" height="25" alt="twitter"></a>
-    <a href="https://www.linkedin.com/in/christopher-lamkin-373a9547?trk=nav_responsive_tab_profile_pic"><img src="imgs/linkedin-logo.png" width="25" height="25" alt="linkedin"></a>
-    <a href="https://github.com/Cjwired57"><img src="imgs/github-logo.png" width="25" height="25" alt="git"></a>
+    <a href="https://www.facebook.com/clamkin56"><img src="../imgs/Facebook-logo.png" width="25" height="25" alt="facebook"></a>
+    <a href="https://twitter.com/Cjlamkin"><img src="../imgs/twitter-logo.png" width="25" height="25" alt="twitter"></a>
+    <a href="https://www.linkedin.com/in/christopher-lamkin-373a9547?trk=nav_responsive_tab_profile_pic"><img src="../imgs/linkedin-logo.png" width="25" height="25" alt="linkedin"></a>
+    <a href="https://github.com/Cjwired57"><img src="../imgs/github-logo.png" width="25" height="25" alt="git"></a>
   </div>
   <div id="search-bar">
     <input type="text" name="search">
   </div>
 </header>
-<body>
+<article>
   <h3>CSS Borders, Margins and Padding</h3>
   <p>
     When you’re working in CSS, you’ll find yourself using the border, margin, and padding properties to have full control over the elements on your webpage.  Below is a diagram of the box model that should help you understand these properties.
@@ -32,9 +33,9 @@
   <p>
     First off, let's talk about the border. The border denotes the boundaries of an element.  It surrounds the padding of the content, but we’ll get into that later. While the border is always there, you can make it visible with some simple css code, see the examples below.
   </p>
-<img src="#"/>
+<img class="screenshot" src="../imgs/border-values.png"/>
   <p>
-    You can adjust the border properties by changing the color value, wether the border is dashed or solid, and the overall thickness of the border.
+    You can adjust the border properties by changing the color value, wether the border is dashed, solid, dotted, etc. and the overall thickness of the border in pixels.
   </p>
 
   <p>
@@ -43,7 +44,7 @@
   <p>
     There are four properties that you can use to specify the parameters of a margin, and they’re pretty intuitive.
   </p>
-<img src="#"/>
+<img class="screenshot" src="../imgs/margin-properties.png"/>
   <p>
     Adjusting any of these properties will put distance between the border of an element and the direction that you selected.  For example, if you used margin-bottom: 10px, your element would move up by 10 pixels.
 
@@ -57,7 +58,7 @@
   <p>
       Finally, you can use shorthand to speed up the process when working with margins.  Instead of going through the tedious:
   </p>
-<img src="#"/>
+<img class="screenshot" src="../imgs/margin-properties.png"/>
   <p>
     You can instead use: <span> margin: 100px 150px 125px 200px </span> Where each number will apply to it's relative property: top, right, left, bottom.
   </p>
@@ -67,6 +68,7 @@
   <p>
     Finally we come to padding.  Padding properties define the space between an element’s content and it’s border, basically clearing the area around the content but inside the border of an element.  Unlike margins, padding is affected by the background color of an element, as it is inside the border.  The properties are exactly the same as with margins, using padding-top, padding-right, padding-left, and padding-bottom.  The values are the same as well, as is the shorthand.
   </p>
+</article>
 </body>
 <footer>
   <div id="footer-title">
@@ -85,10 +87,6 @@
 </div>
 </footer>
 <!--
-  -Wireframing/creating an HTML page with a pair was very helpful...it gave us a chance to compare our preferred wireframing tools...and there were a few features to my blog I would have forgotten about adding.  Was also introduced to the emmett plugin for sublime which I now can't reccommend highly enough.
-  -Yes wireframing is very helpful for my process.  I definitely want to play around with some more tools (i.e. illustrator/fireworks) to find one I really enjoy using.  Even though my individual blog post was incredibly straightforward in its layout, it was still helpful to go into it with an outline/plan.  My HTML skeleton still doesn't resemble the blog I've envisioned, but hopefully with some CSS practice next week I'll be able to make some final changes.
-  -We went for a pretty straightforward design that had a header/footer with a navigation bar to other parts of the site, a search bar, social media buttons...Then the body contains the blog text with placeholders for images, a header and a date/time stamp.
-  -I learned about nav, section, article and summary.
-Here's a link to my wireframe image: https://github.com/Cjwired57/Cjwired57.github.io/blob/master/imgs/wireframe-blogs.png
+
   -->
 </html>
