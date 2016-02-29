@@ -1,8 +1,12 @@
 #right {
+  height:40%;
+  width:50%;
   float:right;
   background-color:red;
 }
 #left {
+  height:40%
+  width:50%;
   float:left;
   background-color:blue;
 }
