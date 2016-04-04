@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chris Lamkin's DBC Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../stylesheets/default.css" type="text/css"/>
+  <link rel="stylesheet" href="../stylesheets/blog.css" type="text/css"/>
+</head>
+<header>
+  <div id="blog-title"><h5>Chris Lamkin's DBC Blog</h5></div>
+
+  <div id="nav-bar"><nav>
+    <a href="http://cjwired57.github.io/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">About Me</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Projects</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Resume</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cjwired57.github.io/blog/index.html">Blog</a>
+  </nav></div>
+  <div id="social">
+    <a href="https://www.facebook.com/clamkin56"><img src="imgs/Facebook-logo.png" width="25" height="25" alt="facebook"></a>
+    <a href="https://twitter.com/Cjlamkin"><img src="imgs/twitter-logo.png" width="25" height="25" alt="twitter"></a>
+    <a href="https://www.linkedin.com/in/christopher-lamkin-373a9547?trk=nav_responsive_tab_profile_pic"><img src="imgs/linkedin-logo.png" width="25" height="25" alt="linkedin"></a>
+    <a href="https://github.com/Cjwired57"><img src="imgs/github-logo.png" width="25" height="25" alt="git"></a>
+  </div>
+  <div id="search-bar">
+    <input type="text" name="search">
+  </div>
+</header>
+<body>
+  <h3>Arrays and Hashes</h3>
+  <p>
+    Hey, today I’ve decided to talk about two of the most common container classes in Ruby: <span>arrays and hashes</span>.  What is a container object?  Well, when you’re programming down the road, you will most likely find yourself dealing with not just one or two objects, but huge collections of objects.  These collections are best represented by container objects like arrays and hashes.
+  </p>
+<h4>Arrays</h4>
+  <p>
+    What is an array?  Basically an array is just an ordered collection of objects…you can select one object from the collection based on it’s placement inside the collection.  For example, let’s say you have an array of prime numbers, we’ll call it <span>array_prime</span>.
+  </p>
+<pre><code class="ruby"> Array_prime = [2,3,5,7,13,17] </code>
+  <p>
+    Now you can access any of these objects by it’s numerical index, or where it appears in the context of the collection as a whole.
+
+    If I want to call a specific object, I can now just use:
+  </p>
+<pre><code class="ruby"> array_prime[0] </code>
+  <p>
+    Which would return the first object in the array (a little confusing, but we start on 0 instead of 1).
+
+    So if I wanted to access the number 13 I would do this:
+  </p>
+<pre><code class="ruby"> array_prime[4] </code>
+  <p>
+    Arrays can hold virtually any object you want: strings, floats, integers, classes, other arrays, even hashes. <span>Hashes</span>, on the other hand, store objects in pairs, with each pair consisting of a key and a value.  So if I wanted to store some personal information about myself, I could set up a hash with values associated to keys…check it out:
+  </p>
+<pre><code class="ruby"> hash_personal_info = {“favorite-drink” => “Inca Kola”, “favorite-snack” => “funyuns”} </code>
+  <p>
+    So right off the bat a few things have changed since we discussed arrays.  First of all, instead of grouping the objects in brackets as with arrays, we now group them in curly brackets, which are much more fun.
+
+    Second, what is that “=>” doing there?  Basically => is an operator that assigns the value to the key.  So basically it is what tells the hash that funyuns are my favorite snack.  Now you can access these objects in a similar way as with arrays, using the bracket tools.
+  </p>
+  <p>
+      If I wanted to access the value for favorite-drink, all I would do is:
+  </p>
+<pre><code class="ruby"> hash_personal_info[“favorite-drink”] </code>
+  <p>
+    See? Pretty easy! It can also help to think of arrays as hashes where each of the keys are just consecutive numbers.  In the array_prime, we can think of the pairs almost as you would the x and y variables on a graph…(0,2), (1,3), (2,5), etc.  Where each key would be the x value and each value the y.
+  </p>
+  <p>
+    Arrays and hashes are useful in a ton of different situations, and you’ll often have to use your best judgment on when to use either for storing information.  Arrays can be helpful when you are dealing with data that is related to one variable…like if I wanted to compare the height of each person in the class.  However, if I wanted to what each person’s favorite soda was, I might want to use hashes since the pairing gives me more customization.
+  </p>
+</body>
+<footer>
+  <div id="footer-title">
+    <h5>Chris Lamkin's DBC Blog</h5>
+  </div>
+  <div id="footer-navbar">
+    <nav>
+      <a href="http://cjwired57.github.io/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">About Me</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Projects</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Resume</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cjwired57.github.io/blog/index.html">Blog</a>
+    </nav>
+  </div>
+<div id="social">
+<a href="https://www.facebook.com/clamkin56"><img src="imgs/Facebook-logo.png" width="25" height="25" alt="facebook"></a>
+  <a href="https://twitter.com/Cjlamkin"><img src="imgs/twitter-logo.png" width="25" height="25" alt="twitter"></a>
+  <a href="https://www.linkedin.com/in/christopher-lamkin-373a9547?trk=nav_responsive_tab_profile_pic"><img src="imgs/linkedin-logo.png" width="25" height="25" alt="linkedin"></a>
+  <a href="https://github.com/Cjwired57"><img src="imgs/github-logo.png" width="25" height="25" alt="git"></a>
+</div>
+</footer>
+<!--
+  -Wireframing/creating an HTML page with a pair was very helpful...it gave us a chance to compare our preferred wireframing tools...and there were a few features to my blog I would have forgotten about adding.  Was also introduced to the emmett plugin for sublime which I now can't reccommend highly enough.
+  -Yes wireframing is very helpful for my process.  I definitely want to play around with some more tools (i.e. illustrator/fireworks) to find one I really enjoy using.  Even though my individual blog post was incredibly straightforward in its layout, it was still helpful to go into it with an outline/plan.  My HTML skeleton still doesn't resemble the blog I've envisioned, but hopefully with some CSS practice next week I'll be able to make some final changes.
+  -We went for a pretty straightforward design that had a header/footer with a navigation bar to other parts of the site, a search bar, social media buttons...Then the body contains the blog text with placeholders for images, a header and a date/time stamp.
+  -I learned about nav, section, article and summary.
+Here's a link to my wireframe image: https://github.com/Cjwired57/Cjwired57.github.io/blob/master/imgs/wireframe-blogs.png
+  -->
+</html>

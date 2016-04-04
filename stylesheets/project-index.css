@@ -1,0 +1,50 @@
+html {
+  color:#000080;
+  background-color: #fdfdf0;
+}
+a:hover {
+  color: #ff00ff;
+}
+a:link {
+  text-decoration: none;
+}
+h5 {
+  margin-left:10%;
+  font-family:tahoma;
+}
+nav {
+  font-family: tahoma;
+  margin-top:-40px;
+  margin-left:30%;
+  width:30%;
+}
+#bio {
+  text-align: center;
+}
+header {
+  width:100%;
+  height:7%;
+  position:fixed;
+  background-color: #eef3e2;
+}
+#social {
+  margin-top:-22px;
+  margin-left:65%;
+}
+#search-bar {
+  margin-top:-25px;
+  margin-left:80%;
+}
+IMG.project {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+  padding-top:5%;
+}
+footer {
+  background-color:#eef3e2;
+  width:100%;
+  height:7%;
+  position:fixed;
+}
