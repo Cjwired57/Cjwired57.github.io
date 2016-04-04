@@ -1,26 +1,27 @@
 body {
   margin:0px;
-  background-color: #7ec0d6;
+  background-color: #FF5C5C;
 }
 section {
   width:40%;
   padding-left:5%;
   padding-right:5%;
   padding-top:5%;
+  padding-bottom: 5%;
 }
 .column-1 {
-  background-color: #96d5eb;
+  background-color: #FF5C5C;
   float:left;
 }
 .column-2 {
-  background-color: #7ec0d6;
+  background-color: #FF9C9C;
   float:right;
 }
 footer {
   clear:both;
 }
 .bookend {
-  background-color:#47a1bf;
+  background-color:#FFD3CF;
   width:90%;
   padding: 5%;
 }
