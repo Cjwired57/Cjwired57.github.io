@@ -8,264 +8,159 @@
 
   <body>
     <header class="bookend">
-      <h1>GitHub: Git Cheat Sheet</h1>
-      <p>Git is the open source distributed version control system that
-        facilitates GitHub activities on your laptop or desktop.
-        This cheat sheet summarizes commonly used Git command line
-        instructions for quick reference.</p>
+      <h1>SQL Basics Cheat Sheet</h1>
+      <p>SQL stands for "Structured Query Language" and is a language designed to help manage the data you have stored in relational databases.  While there are several relational database management systems, this cheat sheet will focus on SQLite and provide a list of important SQL commands for future reference.</p>
     </header>
   <div class="columns">
     <section class="column-1">
       <article>
-        <h2>INSTALL GIT</h2>
-        <p>GitHub provides desktop clients that include a graphical user
-        interface for the most common repository actions and an automatically
-        updating command line edition of Git for advanced scenarios.</p>
-        <ul>
-          <li><a href="https://windows.github.com">GitHub for Windows</a></li>
-          <li><a href="https://mac.github.com">GitHub for Mac</a></li>
-          <li><a href="http://git-scm.com">Git for All Platforms</a></li>
-        </ul>
-
-        Git distributions for Linux and POSIX systems are available on the
-        official Git SCM web site.
-      </article>
-
-      <article>
-        <h2>CONFIGURE TOOLING</h2>
-        <p>Configure user information for all local repositories</p>
-        <p> To see a summary of each command, click it.</p>
+        <h2>CREATING TABLES</h2>
+        <p>To create a table from scratch you use the CREATE statement.  As a clause, CREATE TABLE will tell SQL that you want to create a new table.  As you can see below, that clause is followed by the table name, which is followed by the fields (or columns) you would like the table to include, along with the datatype of the column.</p>
 
         <details>
-          <summary><code>$ git config --global user.name "[name]"</code></summary>
-          <p>Sets the name you want attached to your commit transactions</p>
-        </details>
-
-        <details>
-          <summary><code>$ git config --global user.email "[email address]"</code></summary>
-          <p>Sets the email you want atached to your commit transactions</p>
-        </details>
-
-        <details>
-          <summary><code>$ git config --global color.ui auto</code></summary>
-          <p>Enables helpful colorization of command line output</p>
+          <summary><code> CREATE TABLE animals (id INTEGER, species TEXT, class TEXT);</code></summary>
+          <p>Above we have created a table with fields id, species, and class.  It's important to remember to follow every SQL statement with a semicolon, if you forget it though, just add one on the next line.</p>
         </details>
       </article>
 
       <article>
-        <h2>CREATE REPOSITORIES</h2>
-        <p>Start a new repository or obtain one from an existing URL</p>
+        <h2>INSERTING ROWS</h2>
+        <p>An INSERT statement will insert rows into a field/column. By using the INSERT INTO clause you can add the specified row(s).</p>
 
         <details>
-          <summary><code>$ git init [project-name]</code></summary>
-          <p>Creates a new local repository with the specified name</p>
+          <summary><code> INSERT INTO animals (id, species, class) VALUES (1, "homo_sapien", "mammal");</code></summary>
+          <summary><code> INSERT INTO animals (id, species, class) VALUES (2, "garter_snake", "amphibian");</code></summary>
+          <summary><code> INSERT INTO animals (id, species, class) VALUES (3, "great_white_shark", "cartilaginous_fish");</code></summary>
+          <p>By using the INSERT INTO clause and specifying the columns id, species and class, we can use the VALUES statement to input the data for each field in our new rows.  Above we have added humans, garter snakes, and great white sharks to the database.</p>
         </details>
 
-        <details>
-          <summary><code>$ git clone [url]</code></summary>
-          <p>Downloads a project and its entire version history</p>
-        </details>
       </article>
 
       <article>
-        <h2>MAKE CHANGES</h2>
-        <p>Review edits and craft a commit transaction</p>
+        <h2>SELECT</h2>
+        <p>You can use a SELECT statement to fetch specific pieces of data from the database.</p>
 
         <details>
-          <summary><code>$ git status</code></summary>
-          <p>Lists all new or modified files to be committed</p>
+          <summary><code>SELECT species FROM animals;</code></summary>
+          <p>After we initiate the query with SELECT we specify which column we want to query data from, and FROM tells us which table we want to fetch the data from...here it is the species column of the animals table.</p>
+          <p>You can also use * as a wildcard taht allows you to select all of the columns of a table, so that you don't have to name each one individually. You can see it being used below:</p>
+          <summary><code>SELECT * FROM animals;</code></summary>
         </details>
 
-        <details>
-          <summary><code>$ git add [file]</code></summary>
-          <p>Snapshots the file in preparation for versioning</p>
-        </details>
-
-        <details>
-          <summary><code>$ git reset [file]</code></summary>
-          <p>Unstages the file, but preserve its contents</p>
-        </details>
-
-        <details>
-          <summary><code>$ git diff</code></summary>
-          <p>Shows file differences not yet staged</p>
-        </details>
-
-        <details>
-          <summary><code>$ git diff --staged</code></summary>
-          <p>Shows file differences between staging and the last file version</p>
-        </details>
-
-        <details>
-          <summary><code>$ git commit -m "[descriptive message]"</code></summary>
-          <p>Records file snapshots permanently in version history</p>
-        </details>
       </article>
 
       <article>
-        <h2>GROUP CHANGES</h2>
-        <p>Name a series of commits and combine completed efforts</p>
+        <h2>UPDATE</h2>
+        <p>By using an UPDATE statement we can edit a row inside of a table using the SET and WHERE clauses</p>
 
         <details>
-          <summary><code>$ git branch</code></summary>
-          <p>Lists all local branches in the current repository</p>
+          <summary><code>UPDATE animals SET class = "reptile" WHERE id = 2;</code></summary>
+          <p>Here we have corrected the info on garter snake by changing its class from amphibian to reptile.</p>
         </details>
 
-        <details>
-          <summary><code>$ git branch [branch-name]</code></summary>
-          <p>Creates a new branch</p>
-        </details>
-
-        <details>
-          <summary><code>$ git checkout [branch-name]</code></summary>
-          <p>Switches to the specified branch and updates the working directory</p>
-        </details>
-
-        <details>
-          <summary><code>$ git merge [branch]</code></summary>
-          <p>Combines the specified branch’s history into the current branch</p>
-        </details>
-
-        <details>
-          <summary><code>$ git branch -d [branch-name]</code></summary>
-          <p>Deletes the specified branch</p>
-        </details>
       </article>
+
+      <article>
+        <h2>ALTER TABLE</h2>
+        <p>An ALTER TABLE statement lets you add a new column to the table by using the ADD COLUMN clause and specifying what data type the column will contain.</p>
+
+        <details>
+          <summary><code>ALTER TABLE animals ADD COLUMN conservation_status TEXT;</code></summary>
+          <p>Here we have added another column to the table that tells us what the conservation status of each species is.  We can now use what we learned with UPDATE to fill in the missing values for the new column.</p>
+        </details>
+        <details>
+          <summary><code>UPDATE animals SET conservation_status = "least_concern" WHERE id = 1;</code></summary>
+          <summary><code>UPDATE animals SET conservation_status = "least_concern" WHERE id = 2;</code></summary>
+          <summary><code>UPDATE animals SET conservation_status = "vulnerable" WHERE id = 3;</code></summary>
+        </details>
+
+      </article>
+
+      <article>
+        <h2>DELETE</h2>
+        <p>The DELETE FROM statement lets you delete a row or rows from your table by using WHERE.</p>
+
+        <details>
+          <summary><code>DELETE FROM animals WHERE id = 1;</code></summary>
+          <p>Here we have deleted the humans row from our database!</p>
+        </details>
+
+      </article>
+
     </section>
 
     <section class="column-2">
       <article>
-        <h2>REFACTOR FILENAMES</h2>
-        <p>Relocate and remove versioned files</p>
+        <h2>SELECT DISTINCT</h2>
+        <p>This query will return unique values in the specified column(s).</p>
 
         <details>
-          <summary><code>$ git rm [file]</code></summary>
-          <p>Deletes the file from the working directory and stages the deletion</p>
-        </details>
-
-        <details>
-          <summary><code>$ git rm --cached [file]</code></summary>
-          <p>Removes the file from version control but preserves the file locally</p>
-        </details>
-
-        <details>
-          <summary><code>$ git mv [file-original] [file-renamed]</code></summary>
-          <p>Changes the file name and prepares it for commit</p>
-        </details>
-      </article>
-
-      <article>
-        <h2>SUPPRESS TRACKING</h2>
-        <p>Exclude temporary files and paths</p>
-
-        <details>
-          <summary><code>*.log
-                    build/
-                    temp-*
-          </code></summary>
-          <p>A text file named .gitignore suppresses accidental versioning of files and paths matching the specified paterns</p>
-        </details>
-
-        <details>
-          <summary><code>$ git ls-files --other --ignored --exclude-standard</code></summary>
-          <p>Lists all ignored files in this project</p>
-        </details>
-      </article>
-
-      <article>
-        <h2>SAVE FRAGMENTS</h2>
-        <p>Shelve and restore incomplete changes</p>
-
-        <details>
-          <summary><code>$ git stash</code></summary>
-          <p>Temporarily stores all modified tracked files</p>
-        </details>
-
-        <details>
-          <summary><code>$ git stash list</code>Lists all stashed changesets</summary>
-          <p></p>
-        </details>
-
-        <details>
-          <summary><code>$ git stash pop</code></summary>
-          <p>Restores the most recently stashed files</p>
-        </details>
-
-        <details>
-          <summary><code>$ git stash drop</code></summary>
-          <p>Discards the most recently stashed changeset</p>
+          <summary><code>SELECT DISTINCT conservation_status FROM animals;</code></summary>
+          <p>Because we have only one unique value in the conservation status field, this statement will return the "vulnerable" value from the Great White Shark row.</p>
+          <p>You can also use the wildcard character '_' which means that any character can be substituted without breaking the pattern.  So say we had "great_green_shark" then </p>
         </details>
 
       </article>
 
       <article>
-        <h2>REVIEW HISTORY</h2>
-        <p>Browse and inspect the evolution of project files</p>
+        <h2>Using WHERE with Operators</h2>
+        <p>It's important to know that when using the WHERE clause you can use all of the operators that we have become familiar with so far (=, !=, >, <, >=, <=, etc.  We've already seen WHERE paired with the "=" operator above, but it's useful to know that you can further specify using these other operators.</p>
 
-        <details>
-          <summary><code>$ git log</code></summary>
-          <p>Lists version history for the current branch</p>
-        </details>
-
-        <details>
-          <summary><code>$ git log --follow [file]</code></summary>
-          <p>Lists version history for a file, including renames</p>
-        </details>
-
-        <details>
-          <summary><code>$ git diff [first-branch]...[second-branch]</code></summary>
-          <p>Shows content differences between two branches</p>
-        </details>
-
-        <details>
-          <summary><code>$ git show [commit]</code></summary>
-          <p>Outputs metadata and content changes of the specified commit</p>
-        </details>
       </article>
 
       <article>
-        <h2>REDO COMMITS</h2>
-        <p>Erase mistakes and craft replacement history</p>
+        <h2>LIKE</h2>
+        <p>LIKE is what we call a special operator and is super useful in our SQL queries. Used in conjunction with WHERE we can use LIKE to compare similar values.</p>
 
         <details>
-          <summary><code>$ git reset [commit]</code></summary>
-          <p>Undoes all commits after [commit], preserving changes locally</p>
+          <summary><code>SELECT * FROM animals WHERE species LIKE 'g%';</code></summary>
+          <p>'%' is another wildcard that will match zero or more missing letters in the pattern.  So, the above statement would return both garter_snake and great_white_shark since both values begin with the letter "g".  This wildcard can be added before the letter, in which case all values ending in the specified letter would be returned. </p>
+          <p>You can also use the wildcard character '_' which means that any character can be substituted without breaking the pattern.  So say we had the imaginary animal "great_green_shark" then used the statement WHERE name like 'g________________'... this would return both the great_white AND the great_green species data, because the number of characters are the same. </p>
         </details>
 
-        <details>
-          <summary><code>$ git reset --hard [commit]</code></summary>
-          <p>Discards all history and changes back to the specified commit</p>
-        </details>
       </article>
 
       <article>
-        <h2>SYNCHRONIZE CHANGES</h2>
-        <p>Register a repository bookmark and exchange version history</p>
+        <h2>BETWEEN</h2>
+        <p>BETWEEN is another special operator used in conjunction with AND that will filter the results within a certain range.</p>
 
         <details>
-          <summary><code>$ git fetch [bookmark]</code></summary>
-          <p>Downloads all history from the repository bookmark</p>
+          <summary><code>SELECT * FROM animals WHERE id BETWEEN 1 AND 2;</code></summary>
+          <p>Using the where clause, above we have targeted all rows with id numbers between 1 up to and including 2. </p>
         </details>
 
-        <details>
-          <summary><code>$ git merge [bookmark]/[branch]</code></summary>
-          <p>Combines bookmark’s branch into current local branch</p>
-        </details>
+      </article>
+
+      <article>
+        <h2>AND and OR</h2>
+        <p>AND can also be used to establish another condition when using the WHERE clause.  See the example below.</p>
 
         <details>
-          <summary><code>$ git push [alias] [branch]</code></summary>
-          <p>Uploads all local branch commits to GitHub</p>
+          <summary><code>SELECT * FROM animals WHERE id BETWEEN 1 AND 2 AND species LIKE 'g%';</code></summary>
+          <p>Using the AND operator, we have now created two separate conditions that must be met for a row to be returned. First the ID number must fall within the range established by the BETWEEN operator, and finally the name must begin with the letter 'g'.  If both conditions are met, as is the case with the species garter_snake, then the row will be returned by the query. the OR operator can be used in a similar way, allowing the query to be returned if one or both of the two conditions have been met.</p>
         </details>
 
+      </article>
+
+      <article>
+        <h2>ORDER BY</h2>
+        <p>ORDER BY is used in conjunction with keywords ASC and DESC to help you sort your query.  The ORDER BY clause lets you sort the result of a specific column either alphabetically or numerically.</p>
+
         <details>
-          <summary><code>$ git pull</code></summary>
-          <p>Downloads bookmark history and incorporates changes</p>
+          <summary><code>SELECT * FROM animals ORDER BY species ASC;</code></summary>
+          <p>The above statement will return the rows in an alphabetical order based on their value in the species column.  Because the letter 'g' is higher up the alphabet than 'g', the homo_sapien species will be dropped to the bottom of the list.</p>
         </details>
+        <p>You can also set a limit to your QUERY using the LIMIT clause followed by a numerical value.</p>
+        <details>
+          <summary><code>SELECT * FROM animals ORDER BY species ASC LIMIT 2;</code></summary>
+          <p>By setting LIMIT at 2, this query will only return the top two rows alphabetically, so both garter_snake and great_white_shark. </p>
+        </details>
+
       </article>
     </section>
   </div>
     <footer class="bookend">
-      This information is copied directly from <a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf">GitHub's Training Cheatsheet</a>.
+      <p>This concludes the SQL basics cheat-sheet, a cheat_sheet including a list of Aggregate Functions will be added this week.  In the meantime, feel free to peruse this <a href="https://www.codecademy.com/articles/sql-commands?r=master">complete SQL glossary</a> for further reference.</p>
     </footer>
   <!-- Add your reflection here as a comment. -->
   </body>
